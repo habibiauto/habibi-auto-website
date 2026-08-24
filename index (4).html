@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Habibi Auto Service | Mobile Mechanic in London, Ontario</title>
+  <meta name="description" content="Convenient mobile mechanic service in London, Ontario and surrounding areas. Brakes, diagnostics, oil changes, AC service, suspension, batteries and more.">
+  <meta name="theme-color" content="#101216">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="Habibi Auto Service">
+  <meta property="og:description" content="Professional mobile mechanic service that comes to you in London, Ontario and surrounding areas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://habibiauto.ca/">
+  <meta property="og:image" content="https://habibiauto.ca/habibi-auto-van.jpg">
+  <link rel="canonical" href="https://habibiauto.ca/">
+
+  <style>
+    .service-card[role="button"]:focus-visible {
+      outline: 3px solid #b61f2b;
+      outline-offset: 3px;
+    }
+    .service-card[role="button"]:active {
+      transform: translateY(-1px);
+    }
+  </style>
+
+
+<style>
+  .vehicle-picker {
+    margin: 4px 0 8px;
+    padding: 22px;
+    border: 1px solid #d8d4cc;
+    border-radius: 18px;
+    background: #f7f5f1;
+  }
+  .vehicle-picker-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .vehicle-picker-head > div > label {
+    display: block;
+    margin-bottom: 5px;
+    color: #202329;
+    font-size: .88rem;
+  }
+  .vehicle-help {
+    margin: 0;
+    max-width: 680px;
+    color: #666b73;
+    font-size: .82rem;
+    line-height: 1.5;
+  }
+  .vehicle-data-status {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 11px;
+    border-radius: 999px;
+    background: #ece8e0;
+    color: #5a5f67;
+    font-size: .72rem;
+    font-weight: 850;
+    white-space: nowrap;
+  }
+  .vehicle-data-status.loading {
+    color: #865e08;
+    background: #fff2ca;
+  }
+  .vehicle-data-status.ready {
+    color: #22623a;
+    background: #def2e5;
+  }
+  .vehicle-data-status.error {
+    color: #8b2730;
+    background: #f8e0e2;
+  }
+  .vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 15px;
+  }
+  .vehicle-other-input {
+    margin-top: 8px;
+  }
+  .vehicle-source-note {
+    margin: 14px 0 0;
+    color: #7a7f87;
+    font-size: .73rem;
+    line-height: 1.5;
+  }
+  @media (max-width: 680px) {
+    .vehicle-picker {
+      padding: 18px;
+    }
+    .vehicle-picker-head {
+      display: block;
+    }
+    .vehicle-data-status {
+      margin-top: 10px;
+    }
+    .vehicle-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Mobile mechanic serving London, Ontario and surrounding areas</span>
+      <span>Open daily, 9 AM–9 PM &nbsp;•&nbsp; <a href="tel:+12892141944">289-214-1944</a></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Habibi Auto Service home">
+        <img src="habibi-logo-tight.png" alt="Habibi Auto Service — We Come to You">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#app">App</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="tel:+12892141944">Call now</a>
+        <a class="btn btn-primary" href="#contact">Request service</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="habibi-logo-tight.png" alt="Habibi Auto Service — We Come to You">
+          <p class="eyebrow">Mobile mechanic • London, Ontario</p>
+          <h1>Your mobile mechanic. We come to you.</h1>
+          <p>Professional automotive maintenance, diagnostics and repairs at your driveway, workplace or vehicle location in London, Ontario and surrounding areas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request a booking</a>
+            <a class="btn btn-outline" href="tel:+12892141944">Call 289-214-1944</a>
+          </div>
+          <div class="hero-facts">
+            <span><i></i>Open every day, 9 AM–9 PM</span>
+            <span><i></i>Family-run mobile service</span>
+            <span><i></i>Clear starting prices</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-card"><img src="habibi-auto-van.jpg" alt="Habibi Auto Service mobile mechanic van"></div>
+          <div class="float-card"><span class="float-label">Mobile service</span><strong>No towing. No waiting room.</strong><span>Tell us what your vehicle needs and we will confirm the appointment.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Business highlights">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Nearly 10 years</strong><span>Hands-on automotive experience</span></div>
+        <div class="trust-item"><strong>Mercedes-Benz experience</strong><span>Five years specializing in the brand</span></div>
+        <div class="trust-item"><strong>Mobile convenience</strong><span>No shop waiting room</span></div>
+        <div class="trust-item"><strong>London and beyond</strong><span>Travel details confirmed in advance</span></div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Services</p><h2>Practical service for the repairs your vehicle needs most.</h2></div>
+          <p>Most work is completed where your vehicle is parked. Final pricing depends on the vehicle, condition, access and work required.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-service="Full brake job – pads and rotors on both axles" role="button" tabindex="0" aria-label="Request Full Brake Job" style="cursor:pointer;"><div class="service-top"><span class="icon">◉</span><span class="price">From $300</span></div><h3>Full Brake Job</h3><p>Labour for pads and rotors on both axles, including cleaning and anti-seize where appropriate. Parts are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Partial brake job – pads and rotors on one axle" role="button" tabindex="0" aria-label="Request Partial Brake Job – Pads and Rotors (One Axle)" style="cursor:pointer;"><div class="service-top"><span class="icon">◉</span><span class="price">Labour from $160</span></div><h3>Partial Brake Job – Pads and Rotors (One Axle)</h3><p>Labour to replace the brake pads and rotors on either the front or rear axle. Parts are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Partial brake job – brake pads only on one axle" role="button" tabindex="0" aria-label="Request Partial Brake Job – Brake Pads Only (One Axle)" style="cursor:pointer;"><div class="service-top"><span class="icon">◉</span><span class="price">Labour from $120</span></div><h3>Partial Brake Job – Brake Pads Only (One Axle)</h3><p>Labour to replace the brake pads on either the front or rear axle. Parts and any additional required work are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="General diagnostics" role="button" tabindex="0" aria-label="Request General Diagnostics" style="cursor:pointer;"><div class="service-top"><span class="icon">⌁</span><span class="price">From $80</span></div><h3>General Diagnostics</h3><p>Assessment of warning lights, strange noises, leaks, drivability concerns and other vehicle problems.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Oil change" role="button" tabindex="0" aria-label="Request Oil Change" style="cursor:pointer;"><div class="service-top"><span class="icon">●</span><span class="price">From $99</span></div><h3>Oil Change</h3><p>Full synthetic oil and a quality new filter, with professional disposal of used oil.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="AC service" role="button" tabindex="0" aria-label="Request AC Service" style="cursor:pointer;"><div class="service-top"><span class="icon">❄</span><span class="price">From $140</span></div><h3>AC Service</h3><p>Air-conditioning diagnosis and recharge service where appropriate. Refrigerant and parts are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Suspension" role="button" tabindex="0" aria-label="Request Suspension" style="cursor:pointer;"><div class="service-top"><span class="icon">↕</span><span class="price">From $80</span></div><h3>Suspension</h3><p>Diagnosis and replacement of common suspension components, including links, control arms, struts and related parts.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Tire service" role="button" tabindex="0" aria-label="Request Tire Services" style="cursor:pointer;"><div class="service-top"><span class="icon">◎</span><span class="price">From $80</span></div><h3>Tire Services</h3><p>Seasonal wheel changes and common tire services. Tires, valves, weights and materials are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Battery replacement" role="button" tabindex="0" aria-label="Request Battery Replacement" style="cursor:pointer;"><div class="service-top"><span class="icon">▣</span><span class="price">From $80</span></div><h3>Battery Replacement</h3><p>Battery testing and replacement. The battery and additional parts are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Spark plugs" role="button" tabindex="0" aria-label="Request Spark Plugs" style="cursor:pointer;"><div class="service-top"><span class="icon">✦</span><span class="price">From $120</span></div><h3>Spark Plugs</h3><p>Spark-plug replacement for many vehicles. Pricing can change when major disassembly is required.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Serpentine belt" role="button" tabindex="0" aria-label="Request Serpentine Belt" style="cursor:pointer;"><div class="service-top"><span class="icon">∞</span><span class="price">From $80</span></div><h3>Serpentine Belt</h3><p>Belt inspection and replacement, including checks for common causes of wear or failure.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Roadside assistance" role="button" tabindex="0" aria-label="Request Roadside Assistance" style="cursor:pointer;"><div class="service-top"><span class="icon">▲</span><span class="price">From $150</span></div><h3>Roadside Assistance</h3><p>Mobile help for eligible breakdowns. Parts, towing and additional travel are separate.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+          <article class="service-card" data-service="Other service" role="button" tabindex="0" aria-label="Request Other Services" style="cursor:pointer;"><div class="service-top"><span class="icon">＋</span><span class="price">From $80</span></div><h3>Other Services</h3><p>Need something not listed? Send your vehicle information and a description of the problem.</p><span style="display:inline-block;margin-top:14px;color:#b61f2b;font-size:.82rem;font-weight:900;">Request this service →</span></article>
+        </div>
+        <div class="price-note"><strong>Pricing note:</strong> Prices shown are starting prices in Canadian dollars and may be labour-only. Parts, fluids, refrigerant, tires, batteries and materials may be additional. Final pricing is confirmed after reviewing the vehicle and requested work.</div>
+      </div>
+    </section>
+
+    <section class="section-pad dark" id="how">
+      <div class="container process-grid">
+        <div class="process-copy"><p class="eyebrow">How it works</p><h2>A simpler way to get your vehicle serviced.</h2><p>Your requested time is not confirmed until Habibi Auto reviews the service details, travel distance and availability.</p></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">1</span><div><h3>Send your request</h3><p>Tell us about your vehicle, the service you need and where it is located.</p></div></article>
+          <article class="step"><span class="step-number">2</span><div><h3>We confirm the details</h3><p>We contact you to confirm the appointment time, starting price and any travel charge.</p></div></article>
+          <article class="step"><span class="step-number">3</span><div><h3>We come to you</h3><p>Our mobile mechanic arrives at your home, workplace or vehicle location to complete the approved work.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="about">
+      <div class="container about-grid">
+        <div class="about-panel"><blockquote>Experienced service with the convenience of a mechanic who comes to you.</blockquote><small>Family-run • London, Ontario</small></div>
+        <div class="about-copy"><p class="eyebrow">About Habibi Auto</p><h2>Local, mobile and built around convenience.</h2><p>Habibi Auto Service is a family-run mobile mechanic business serving London, Ontario and surrounding communities. Our lead mechanic has nearly a decade of automotive experience, including five years specializing in Mercedes-Benz at MB Master.</p><p>We created Habibi Auto to offer customers a more convenient, straightforward and personal way to maintain and repair their vehicles.</p><ul class="checks"><li>Mobile service at your location</li><li>Experience across many makes and models</li><li>Appointment details confirmed before service</li><li>Starting prices clearly explained</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section-pad app-promo" id="app">
+      <div class="container app-grid">
+        <div class="app-copy">
+          <span class="launch-pill">Habibi Auto mobile app</span>
+          <p class="eyebrow">Download our app</p>
+          <h2>Book your mechanic from your phone.</h2>
+          <p>Our mobile booking app gives you a faster way to select a service, enter your vehicle details, request a preferred time and keep your booking information together.</p>
+          <div class="install-points">
+            <div><span>1</span><strong>Open the app</strong><small>Use the website button when the app is published.</small></div>
+            <div><span>2</span><strong>Add it to your home screen</strong><small>Keep Habibi Auto one tap away on iPhone or Android.</small></div>
+            <div><span>3</span><strong>Request service</strong><small>Choose your service, vehicle and preferred appointment time.</small></div>
+          </div>
+          <div class="app-actions">
+            <a class="btn btn-gold" data-app-link href="#contact" aria-disabled="true">App launching soon</a>
+            <a class="btn btn-outline" href="#contact">Book on this website</a>
+          </div>
+          <p class="app-note">The public app link will be connected here as soon as the booking app is published.</p>
+        </div>
+        <div class="app-visual">
+          <div class="phone-glow"></div>
+          <div class="phone-mock" aria-label="Habibi Auto booking app preview">
+            <div class="phone-speaker"></div>
+            <div class="phone-screen">
+              <div class="app-head"><img src="habibi-logo-tight.png" alt="Habibi Auto Service logo"></div>
+              <div class="app-cta">Call 289-214-1944</div>
+              <div class="app-nav"><span>Home</span><span>Services</span><span>Book</span><span>My bookings</span></div>
+              <div class="app-welcome"><small>Mobile mechanic service</small><h3>What does your vehicle need?</h3><p>Choose a service to begin your request.</p></div>
+              <div class="app-service-list"><div><span>◉</span><strong>Brake service</strong><small>From $160 per axle</small></div><div><span>⌁</span><strong>Diagnostics</strong><small>From $80</small></div><div><span>●</span><strong>Oil change</strong><small>From $100</small></div></div>
+              <div class="app-book-button">Request a booking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy"><p class="eyebrow">Request a booking</p><h2>Tell us what your vehicle needs.</h2><p>Send a request and Habibi Auto will contact you to confirm availability and pricing. Your requested time is not confirmed until we contact you.</p><div class="contact-cards"><div class="contact-card"><span>Call or text</span><a href="tel:+12892141944">289-214-1944</a></div><div class="contact-card"><span>Email</span><a href="mailto:Contact@habibiauto.ca">Contact@habibiauto.ca</a></div><div class="contact-card"><span>Instagram</span><a href="https://www.instagram.com/habibiautoservice/" target="_blank" rel="noopener noreferrer">@habibiautoservice</a></div><div class="contact-card"><span>TikTok</span><a href="https://www.tiktok.com/@habibiautoservice" target="_blank" rel="noopener">@HabibiAutoService</a></div><div class="contact-card"><span>Service area</span><strong>London, Ontario and surrounding areas</strong></div></div></div>
+        <form id="service-form" action="https://formsubmit.co/Contact@habibiauto.ca" method="POST"><input type="hidden" name="_subject" value="New Habibi Auto service request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://habibiauto.ca/thank-you.html"><input type="hidden" name="_url" value="https://habibiauto.ca/#contact"><input type="hidden" name="_autoresponse" value="Thank you for contacting Habibi Auto Service. We received your service request. This is an automatic confirmation only; your appointment is not booked or confirmed yet. We will review your vehicle, requested service, location and preferred timing, then contact you to confirm availability, pricing, any travel charge and the appointment details. For urgent assistance, call or text 289-214-1944. We are open daily from 9 AM to 9 PM."><input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true"><div class="form-grid"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" required></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field full vehicle-picker">
+  <div class="vehicle-picker-head">
+    <div>
+      <label>Vehicle details</label>
+      <p class="vehicle-help">Choose your year, make, model and trim/style. If your vehicle is not listed, choose <strong>Other / Not listed</strong> and type it in.</p>
+    </div>
+    <span id="vehicle-data-status" class="vehicle-data-status">Vehicle list ready</span>
+  </div>
+
+  <div class="vehicle-grid">
+    <div class="field">
+      <label for="vehicle-year">Year</label>
+      <select id="vehicle-year" name="vehicle_year" required>
+        <option value="">Choose year</option>
+      </select>
+      <input id="vehicle-year-other" name="vehicle_year_other" class="vehicle-other-input" inputmode="numeric" placeholder="Enter year" hidden>
+    </div>
+
+    <div class="field">
+      <label for="vehicle-make">Make</label>
+      <select id="vehicle-make" name="vehicle_make" required disabled>
+        <option value="">Choose year first</option>
+      </select>
+      <input id="vehicle-make-other" name="vehicle_make_other" class="vehicle-other-input" placeholder="Enter make" hidden>
+    </div>
+
+    <div class="field">
+      <label for="vehicle-model">Model</label>
+      <select id="vehicle-model" name="vehicle_model" required disabled>
+        <option value="">Choose make first</option>
+      </select>
+      <input id="vehicle-model-other" name="vehicle_model_other" class="vehicle-other-input" placeholder="Enter model" hidden>
+    </div>
+
+    <div class="field">
+      <label for="vehicle-trim">Trim / Style</label>
+      <select id="vehicle-trim" name="vehicle_trim" required disabled>
+        <option value="">Choose model first</option>
+      </select>
+      <input id="vehicle-trim-other" name="vehicle_trim_other" class="vehicle-other-input" placeholder="Enter trim, engine, or style if known" hidden>
+    </div>
+  </div>
+
+  <input id="vehicle-summary" name="vehicle" type="hidden">
+  <p class="vehicle-source-note">Vehicle selection data is sourced from an open NHTSA-based vehicle database. Exact Canadian trim naming can vary, so use “Other / Not listed” whenever needed.</p>
+</div><div class="field"><label for="service">Service</label><select id="service" name="service" required><option value="">Choose a service</option><option>Full brake job – pads and rotors on both axles</option><option>Partial brake job – pads and rotors on one axle</option><option>Partial brake job – brake pads only on one axle</option><option>General diagnostics</option><option>Oil change</option><option>AC service</option><option>Suspension</option><option>Tire service</option><option>Battery replacement</option><option>Spark plugs</option><option>Serpentine belt</option><option>Roadside assistance</option><option>Other service</option></select></div><div class="field"><label for="location">Vehicle location</label><input id="location" name="location" placeholder="City or postal code" required></div><div class="field full"><label for="message">Describe the problem or requested work</label><textarea id="message" name="message"></textarea></div></div><button class="btn btn-dark" type="submit">Send service request</button><p class="form-note">After submitting, you will see a confirmation page and receive an automatic email. Your appointment is not confirmed until Habibi Auto contacts you.</p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><div class="footer-grid"><div><a class="brand footer-brand" href="#home"><img src="habibi-logo-tight.png" alt="Habibi Auto Service — We Come to You"></a><p style="max-width:420px;margin-top:20px">Mobile mechanic services for London, Ontario and surrounding areas.</p></div><div><h3>Explore</h3><div class="footer-links"><a href="#services">Services</a><a href="#how">How it works</a><a href="#about">About</a><a href="#app">Download app</a><a href="#contact">Request service</a></div></div><div><h3>Contact</h3><div class="footer-links"><a href="tel:+12892141944">289-214-1944</a><a href="mailto:Contact@habibiauto.ca">Contact@habibiauto.ca</a><a href="https://www.instagram.com/habibiautoservice/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@habibiautoservice" target="_blank" rel="noopener">TikTok</a><span>Open daily, 9 AM–9 PM</span></div></div></div><div class="footer-bottom"><span>© 2026 Habibi Auto Service. All rights reserved.</span><span>Mobile service • London, Ontario</span></div></div></footer>
+
+  <div class="mobile-bar"><a class="btn btn-outline" href="tel:+12892141944">Call now</a><a class="btn btn-primary" href="#contact">Book service</a></div>
+  <script>
+const SITE_CONFIG = {
+  // Add the published booking-app URL here when it is ready.
+  appUrl: ""
+};
+
+const appButtons = document.querySelectorAll("[data-app-link]");
+appButtons.forEach((button) => {
+  if (SITE_CONFIG.appUrl) {
+    button.href = SITE_CONFIG.appUrl;
+    button.textContent = "Open booking app";
+    button.removeAttribute("aria-disabled");
+  } else {
+    button.href = "#contact";
+    button.textContent = "App launching soon";
+    button.setAttribute("aria-disabled", "true");
+  }
+});
+
+const serviceCards = document.querySelectorAll(".service-card[data-service]");
+const serviceSelect = document.querySelector("#service");
+const contactSection = document.querySelector("#contact");
+
+function openServiceRequest(card) {
+  const selectedService = card.dataset.service;
+
+  if (serviceSelect && selectedService) {
+    serviceSelect.value = selectedService;
+    serviceSelect.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", "#contact");
+
+    window.setTimeout(() => {
+      if (serviceSelect) {
+        serviceSelect.focus({ preventScroll: true });
+      }
+    }, 650);
+  }
+}
+
+serviceCards.forEach((card) => {
+  card.addEventListener("click", () => openServiceRequest(card));
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openServiceRequest(card);
+    }
+  });
+});
+
+
+/* Vehicle Year / Make / Model / Trim selector
+   Data source: Open Vehicle DB (NHTSA-based, updated weekly). */
+const VEHICLE_DB_URLS = {
+  makes: "https://raw.githubusercontent.com/plowman/open-vehicle-db/master/data/makes.csv",
+  models: "https://raw.githubusercontent.com/plowman/open-vehicle-db/master/data/models.csv",
+  styles: "https://raw.githubusercontent.com/plowman/open-vehicle-db/master/data/styles.csv"
+};
+
+const vehicleYear = document.querySelector("#vehicle-year");
+const vehicleMake = document.querySelector("#vehicle-make");
+const vehicleModel = document.querySelector("#vehicle-model");
+const vehicleTrim = document.querySelector("#vehicle-trim");
+const vehicleSummary = document.querySelector("#vehicle-summary");
+const vehicleStatus = document.querySelector("#vehicle-data-status");
+
+const vehicleOtherInputs = {
+  year: document.querySelector("#vehicle-year-other"),
+  make: document.querySelector("#vehicle-make-other"),
+  model: document.querySelector("#vehicle-model-other"),
+  trim: document.querySelector("#vehicle-trim-other")
+};
+
+let vehicleDbPromise = null;
+let vehicleDb = { makes: [], models: [], styles: [] };
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let quoted = false;
+
+  for (let i = 0; i < text.length; i += 1) {
+    const char = text[i];
+
+    if (char === '"') {
+      if (quoted && text[i + 1] === '"') {
+        field += '"';
+        i += 1;
+      } else {
+        quoted = !quoted;
+      }
+    } else if (char === "," && !quoted) {
+      row.push(field);
+      field = "";
+    } else if ((char === "\n" || char === "\r") && !quoted) {
+      if (char === "\r" && text[i + 1] === "\n") i += 1;
+      row.push(field);
+      if (row.some((value) => value !== "")) rows.push(row);
+      row = [];
+      field = "";
+    } else {
+      field += char;
+    }
+  }
+
+  if (field || row.length) {
+    row.push(field);
+    rows.push(row);
+  }
+
+  const headers = rows.shift() || [];
+  return rows.map((values) => {
+    const item = {};
+    headers.forEach((header, index) => {
+      item[header] = values[index] ?? "";
+    });
+    return item;
+  });
+}
+
+function yearMatches(yearSpec, year) {
+  const target = Number(year);
+  if (!yearSpec || !target) return false;
+
+  return yearSpec.split(",").some((part) => {
+    const value = part.trim();
+    if (!value) return false;
+
+    if (value.includes("-")) {
+      const [start, end] = value.split("-").map(Number);
+      return target >= start && target <= end;
+    }
+
+    return Number(value) === target;
+  });
+}
+
+function setVehicleStatus(text, state = "") {
+  if (!vehicleStatus) return;
+  vehicleStatus.textContent = text;
+  vehicleStatus.className = `vehicle-data-status ${state}`.trim();
+}
+
+function setSelectOptions(select, placeholder, values, otherLabel = "Other / Not listed") {
+  if (!select) return;
+
+  select.innerHTML = "";
+  const first = document.createElement("option");
+  first.value = "";
+  first.textContent = placeholder;
+  select.appendChild(first);
+
+  values.forEach(({ value, label }) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = label;
+    select.appendChild(option);
+  });
+
+  const other = document.createElement("option");
+  other.value = "__other__";
+  other.textContent = otherLabel;
+  select.appendChild(other);
+
+  select.disabled = false;
+}
+
+function resetSelect(select, text) {
+  if (!select) return;
+  select.innerHTML = `<option value="">${text}</option>`;
+  select.disabled = true;
+}
+
+function toggleOtherInput(select, input) {
+  if (!select || !input) return;
+  const isOther = select.value === "__other__";
+  input.hidden = !isOther;
+  input.required = isOther;
+  if (!isOther) input.value = "";
+}
+
+function displayValue(select, input) {
+  if (!select) return "";
+  if (select.value === "__other__") return (input?.value || "").trim();
+  return (select.options[select.selectedIndex]?.textContent || "").trim();
+}
+
+function updateVehicleSummary() {
+  if (!vehicleSummary) return;
+  const parts = [
+    displayValue(vehicleYear, vehicleOtherInputs.year),
+    displayValue(vehicleMake, vehicleOtherInputs.make),
+    displayValue(vehicleModel, vehicleOtherInputs.model),
+    displayValue(vehicleTrim, vehicleOtherInputs.trim)
+  ].filter(Boolean);
+
+  vehicleSummary.value = parts.join(" ");
+}
+
+async function loadVehicleDatabase() {
+  if (vehicleDbPromise) return vehicleDbPromise;
+
+  setVehicleStatus("Loading vehicle list…", "loading");
+
+  vehicleDbPromise = Promise.all([
+    fetch(VEHICLE_DB_URLS.makes).then((response) => {
+      if (!response.ok) throw new Error("Makes database failed");
+      return response.text();
+    }),
+    fetch(VEHICLE_DB_URLS.models).then((response) => {
+      if (!response.ok) throw new Error("Models database failed");
+      return response.text();
+    }),
+    fetch(VEHICLE_DB_URLS.styles).then((response) => {
+      if (!response.ok) throw new Error("Styles database failed");
+      return response.text();
+    })
+  ])
+    .then(([makesCsv, modelsCsv, stylesCsv]) => {
+      vehicleDb = {
+        makes: parseCsv(makesCsv),
+        models: parseCsv(modelsCsv),
+        styles: parseCsv(stylesCsv)
+      };
+      setVehicleStatus("Vehicle list loaded", "ready");
+      return vehicleDb;
+    })
+    .catch((error) => {
+      console.error("Vehicle database could not load:", error);
+      setVehicleStatus("Manual entry available", "error");
+      throw error;
+    });
+
+  return vehicleDbPromise;
+}
+
+function populateYears() {
+  if (!vehicleYear) return;
+  const maxYear = 2027;
+  const minYear = 1981;
+
+  const values = [];
+  for (let year = maxYear; year >= minYear; year -= 1) {
+    values.push({ value: String(year), label: String(year) });
+  }
+  setSelectOptions(vehicleYear, "Choose year", values, "Other / Older vehicle");
+}
+
+async function populateMakes() {
+  toggleOtherInput(vehicleYear, vehicleOtherInputs.year);
+  resetSelect(vehicleMake, "Loading makes…");
+  resetSelect(vehicleModel, "Choose make first");
+  resetSelect(vehicleTrim, "Choose model first");
+  toggleOtherInput(vehicleMake, vehicleOtherInputs.make);
+  toggleOtherInput(vehicleModel, vehicleOtherInputs.model);
+  toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+  updateVehicleSummary();
+
+  if (!vehicleYear.value) {
+    resetSelect(vehicleMake, "Choose year first");
+    return;
+  }
+
+  if (vehicleYear.value === "__other__") {
+    setSelectOptions(vehicleMake, "Choose make", [], "Other / Not listed");
+    vehicleMake.value = "__other__";
+    toggleOtherInput(vehicleMake, vehicleOtherInputs.make);
+    setSelectOptions(vehicleModel, "Choose model", [], "Other / Not listed");
+    vehicleModel.value = "__other__";
+    toggleOtherInput(vehicleModel, vehicleOtherInputs.model);
+    setSelectOptions(vehicleTrim, "Choose trim / style", [], "Other / Not listed");
+    vehicleTrim.value = "__other__";
+    toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+    return;
+  }
+
+  try {
+    const db = await loadVehicleDatabase();
+    const makeSlugs = new Set(
+      db.models
+        .filter((model) => yearMatches(model.years, vehicleYear.value))
+        .map((model) => model.make_slug)
+    );
+
+    const makes = db.makes
+      .filter((make) => makeSlugs.has(make.make_slug))
+      .map((make) => ({
+        value: make.make_slug,
+        label: make.make_name
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+
+    setSelectOptions(vehicleMake, "Choose make", makes);
+  } catch {
+    setSelectOptions(vehicleMake, "Choose make", [], "Other / Not listed");
+    vehicleMake.value = "__other__";
+    toggleOtherInput(vehicleMake, vehicleOtherInputs.make);
+  }
+}
+
+async function populateModels() {
+  toggleOtherInput(vehicleMake, vehicleOtherInputs.make);
+  resetSelect(vehicleModel, "Loading models…");
+  resetSelect(vehicleTrim, "Choose model first");
+  updateVehicleSummary();
+
+  if (!vehicleMake.value) {
+    resetSelect(vehicleModel, "Choose make first");
+    return;
+  }
+
+  if (vehicleMake.value === "__other__") {
+    setSelectOptions(vehicleModel, "Choose model", [], "Other / Not listed");
+    vehicleModel.value = "__other__";
+    toggleOtherInput(vehicleModel, vehicleOtherInputs.model);
+    setSelectOptions(vehicleTrim, "Choose trim / style", [], "Other / Not listed");
+    vehicleTrim.value = "__other__";
+    toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+    return;
+  }
+
+  try {
+    const db = await loadVehicleDatabase();
+    const models = db.models
+      .filter((model) =>
+        model.make_slug === vehicleMake.value &&
+        yearMatches(model.years, vehicleYear.value)
+      )
+      .map((model) => ({
+        value: model.model_slug,
+        label: model.model_name
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+
+    setSelectOptions(vehicleModel, "Choose model", models);
+  } catch {
+    setSelectOptions(vehicleModel, "Choose model", [], "Other / Not listed");
+    vehicleModel.value = "__other__";
+    toggleOtherInput(vehicleModel, vehicleOtherInputs.model);
+  }
+}
+
+async function populateTrims() {
+  toggleOtherInput(vehicleModel, vehicleOtherInputs.model);
+  resetSelect(vehicleTrim, "Loading trims…");
+  updateVehicleSummary();
+
+  if (!vehicleModel.value) {
+    resetSelect(vehicleTrim, "Choose model first");
+    return;
+  }
+
+  if (vehicleModel.value === "__other__" || vehicleMake.value === "__other__") {
+    setSelectOptions(vehicleTrim, "Choose trim / style", [], "Other / Not listed");
+    vehicleTrim.value = "__other__";
+    toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+    return;
+  }
+
+  try {
+    const db = await loadVehicleDatabase();
+    const seen = new Set();
+
+    const trims = db.styles
+      .filter((style) =>
+        style.make_slug === vehicleMake.value &&
+        style.model_slug === vehicleModel.value &&
+        yearMatches(style.years, vehicleYear.value)
+      )
+      .filter((style) => {
+        const key = style.style_name.trim().toLowerCase();
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      })
+      .map((style) => ({
+        value: style.style_name,
+        label: style.style_name
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+
+    setSelectOptions(
+      vehicleTrim,
+      trims.length ? "Choose trim / style" : "No exact trim found",
+      trims,
+      trims.length ? "Other / Not listed" : "Other / Enter manually"
+    );
+
+    if (!trims.length) {
+      vehicleTrim.value = "__other__";
+      toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+    }
+  } catch {
+    setSelectOptions(vehicleTrim, "Choose trim / style", [], "Other / Not listed");
+    vehicleTrim.value = "__other__";
+    toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+  }
+}
+
+if (vehicleYear) {
+  populateYears();
+
+  vehicleYear.addEventListener("focus", () => {
+    loadVehicleDatabase().catch(() => {});
+  }, { once: true });
+
+  vehicleYear.addEventListener("change", populateMakes);
+  vehicleMake.addEventListener("change", populateModels);
+  vehicleModel.addEventListener("change", populateTrims);
+
+  vehicleTrim.addEventListener("change", () => {
+    toggleOtherInput(vehicleTrim, vehicleOtherInputs.trim);
+    updateVehicleSummary();
+  });
+
+  Object.values(vehicleOtherInputs).forEach((input) => {
+    input?.addEventListener("input", updateVehicleSummary);
+  });
+
+  document.querySelector("#service-form")?.addEventListener("submit", () => {
+    updateVehicleSummary();
+  });
+}
+
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Habibi Auto Service","telephone":"+1-289-214-1944","email":"Contact@habibiauto.ca","url":"https://habibiauto.ca/","areaServed":["London, Ontario","Southwestern Ontario"],"openingHours":"Mo-Su 09:00-21:00","description":"Family-run mobile mechanic service serving London, Ontario and surrounding areas."}</script>
+</body>
+</html>
