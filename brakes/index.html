@@ -1,432 +1,492 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mobile Brake Repair in London, Ontario | Habibi Auto Service</title>
-  <meta name="description" content="Mobile brake repair in London, Ontario. Habibi Auto Service comes to your home or workplace for eligible brake pad, rotor and brake repairs. Request service today.">
+  <meta name="description" content="Mobile brake repair in London, Ontario. Habibi Auto Service comes to your home or workplace for eligible brake pad, rotor and brake repairs. Request Service today.">
+  <meta name="theme-color" content="#101216">
+  <link rel="icon" href="../favicon.png" type="image/png">
   <link rel="canonical" href="https://habibiauto.ca/brakes/">
+
   <meta property="og:title" content="Mobile Brake Repair in London, Ontario | Habibi Auto Service">
   <meta property="og:description" content="Brake pads, rotors and eligible brake repairs at your home or workplace in London, Ontario.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://habibiauto.ca/brakes/">
   <meta property="og:image" content="https://habibiauto.ca/brakes/mobile-brake-repair-london-ontario.jpg">
+
   <style>
     :root {
-      --bg:#090909;
-      --panel:#121212;
-      --panel2:#181818;
-      --text:#f6f6f6;
-      --muted:#b8b8b8;
-      --red:#e21d2f;
-      --red-dark:#b81524;
-      --line:#2b2b2b;
-      --max:1160px;
+      --ink: #101216;
+      --dark: #101216;
+      --dark-2: #17191e;
+      --paper: #f7f5f1;
+      --white: #ffffff;
+      --text: #f7f7f7;
+      --muted: #c6c8cc;
+      --paper-text: #202329;
+      --paper-muted: #686d75;
+      --line-dark: #30333a;
+      --line-light: #dedad2;
+      --brand-red: #b61f2b;
+      --brand-red-hover: #981923;
+      --max: 1160px;
     }
 
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Arial, Helvetica, sans-serif;
-      line-height:1.55;
+      margin: 0;
+      background: var(--dark);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a { color:inherit; }
-    img { max-width:100%; display:block; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+    }
 
     .topbar {
-      background:#000;
-      border-bottom:1px solid var(--line);
-      color:#d8d8d8;
-      font-size:.9rem;
-    }
-
-    .topbar-inner,
-    .nav,
-    .section,
-    .footer-inner {
-      width:min(var(--max), calc(100% - 36px));
-      margin:auto;
+      background: #0c0e11;
+      border-bottom: 1px solid #25282e;
+      color: #d1d3d7;
+      font-size: .88rem;
     }
 
     .topbar-inner {
-      padding:8px 0;
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .topbar a { text-decoration: none; }
+
+    .site-header {
+      background: var(--dark);
+      border-bottom: 1px solid #292c32;
     }
 
     .nav {
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
+      min-height: 94px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
 
     .brand {
-      text-decoration:none;
-      font-weight:900;
-      letter-spacing:.03em;
-      line-height:1;
-      font-size:1.35rem;
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
     }
 
-    .brand span {
-      display:block;
-      color:var(--red);
-      font-size:.74rem;
-      margin-top:6px;
-      letter-spacing:.16em;
+    .brand img {
+      width: auto;
+      height: 76px;
+      object-fit: contain;
     }
 
-    .nav-actions {
-      display:flex;
-      gap:10px;
-      align-items:center;
+    .nav-actions,
+    .hero-actions,
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:0 20px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:800;
-      border:1px solid transparent;
-      transition:.18s ease;
-      cursor:pointer;
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 21px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .94rem;
+      border: 1px solid transparent;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
     }
 
-    .btn-primary { background:var(--red); color:white; }
-    .btn-primary:hover { background:var(--red-dark); }
-    .btn-secondary { border-color:#4a4a4a; background:#141414; }
-    .btn-secondary:hover { border-color:#777; }
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--brand-red);
+      color: #fff;
+      border-color: var(--brand-red);
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-red-hover);
+      border-color: var(--brand-red-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-color: #5c6068;
+    }
+
+    .btn-outline:hover { border-color: #888d96; }
 
     .hero {
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
       background:
-        radial-gradient(circle at 85% 20%, rgba(226,29,47,.18), transparent 35%),
-        linear-gradient(180deg,#101010,#080808);
+        radial-gradient(circle at 86% 16%, rgba(182, 31, 43, .26), transparent 36%),
+        linear-gradient(180deg, #121419 0%, #0e1014 100%);
+      border-bottom: 1px solid #2b2e34;
     }
 
     .hero-grid {
-      width:min(var(--max), calc(100% - 36px));
-      margin:auto;
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:42px;
-      align-items:center;
-      padding:62px 0;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 46px;
+      align-items: center;
+      padding: 64px 0;
     }
 
     .eyebrow {
-      color:#ff6975;
-      font-size:.82rem;
-      font-weight:900;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:14px;
+      margin: 0 0 14px;
+      color: var(--brand-red);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-size: .79rem;
+      font-weight: 900;
     }
+
+    h1, h2, h3 { color: inherit; }
 
     h1 {
-      font-size:clamp(2.35rem, 5vw, 4.7rem);
-      line-height:.98;
-      margin:0 0 22px;
-      letter-spacing:-.045em;
-      max-width:780px;
-    }
-
-    .hero-copy {
-      font-size:1.13rem;
-      color:#d1d1d1;
-      max-width:690px;
-      margin:0 0 28px;
-    }
-
-    .hero-actions {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:24px;
-    }
-
-    .trust-row {
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      color:#c7c7c7;
-      font-size:.92rem;
-    }
-
-    .trust-row span::before {
-      content:"✓";
-      color:#ff5969;
-      font-weight:900;
-      margin-right:7px;
-    }
-
-    .hero-image-wrap {
-      border:1px solid #353535;
-      border-radius:16px;
-      overflow:hidden;
-      background:#111;
-      box-shadow:0 22px 60px rgba(0,0,0,.38);
-    }
-
-    .hero-image-wrap img {
-      width:100%;
-      aspect-ratio:4/3;
-      object-fit:cover;
-    }
-
-    .image-caption {
-      color:#aaa;
-      font-size:.82rem;
-      padding:10px 13px 12px;
-      background:#101010;
-    }
-
-    .section { padding:68px 0; }
-    .section + .section { border-top:1px solid var(--line); }
-
-    .section-heading {
-      max-width:760px;
-      margin-bottom:30px;
+      margin: 0 0 22px;
+      max-width: 720px;
+      font-size: clamp(2.7rem, 5vw, 4.6rem);
+      line-height: .99;
+      letter-spacing: -.045em;
     }
 
     h2 {
-      margin:0 0 12px;
-      font-size:clamp(1.85rem,3.2vw,2.75rem);
-      letter-spacing:-.025em;
-      line-height:1.08;
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3.3vw, 2.9rem);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+    }
+
+    h3 { margin: 0 0 9px; }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 0 0 28px;
+      color: #d1d3d7;
+      font-size: 1.1rem;
+    }
+
+    .hero-actions { margin-bottom: 23px; }
+
+    .trust-row {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: #c8cbd0;
+      font-size: .9rem;
+    }
+
+    .trust-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-row span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      flex: 0 0 auto;
+    }
+
+    .photo-card {
+      margin: 0;
+      padding: 12px;
+      background: #111318;
+      border: 1px solid #343840;
+      border-radius: 18px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.34);
+    }
+
+    /* Important: never crop the approved real brake photo. */
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 11px;
+      background: #0d0f12;
+    }
+
+    .photo-card figcaption {
+      padding: 10px 4px 2px;
+      color: #aeb1b7;
+      font-size: .81rem;
+    }
+
+    .section {
+      padding: 68px 0;
+      background: var(--paper);
+      color: var(--paper-text);
+    }
+
+    .section.dark {
+      background: #121419;
+      color: #f7f7f7;
+      border-top: 1px solid #2d3036;
+      border-bottom: 1px solid #2d3036;
+    }
+
+    .section-head {
+      max-width: 800px;
+      margin-bottom: 29px;
     }
 
     .lead {
-      color:var(--muted);
-      margin:0;
-      font-size:1.05rem;
+      margin: 0;
+      color: var(--paper-muted);
+      font-size: 1.03rem;
     }
 
-    .cards {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
+    .dark .lead { color: #bdc0c6; }
+
+    .cards,
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .card {
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:24px;
+      background: var(--white);
+      border: 1px solid var(--line-light);
+      border-radius: 15px;
+      padding: 24px;
+    }
+
+    .card p,
+    .step p {
+      margin: 0;
+      color: #686d75;
     }
 
     .price {
-      color:#ff6876;
-      font-size:.92rem;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:.06em;
-      margin-bottom:8px;
+      margin-bottom: 8px;
+      color: var(--brand-red);
+      font-size: .84rem;
+      font-weight: 900;
+      letter-spacing: .055em;
+      text-transform: uppercase;
     }
 
-    .card h3 { margin:0 0 10px; font-size:1.2rem; }
-    .card p { margin:0; color:var(--muted); }
-
-    .note {
-      margin-top:18px;
-      padding:16px 18px;
-      border-left:4px solid var(--red);
-      background:#121212;
-      color:#c9c9c9;
-      font-size:.93rem;
-    }
-
-    .steps {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-      counter-reset:step;
+    .price-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: #ece8e0;
+      border-left: 4px solid var(--brand-red);
+      color: #595e66;
+      font-size: .92rem;
     }
 
     .step {
-      counter-increment:step;
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:24px;
+      background: #191c21;
+      border: 1px solid #343840;
+      border-radius: 15px;
+      padding: 24px;
     }
 
-    .step::before {
-      content:counter(step);
-      display:grid;
-      place-items:center;
-      width:36px;height:36px;
-      border-radius:50%;
-      background:var(--red);
-      font-weight:900;
-      margin-bottom:14px;
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      color: #fff;
+      font-weight: 900;
     }
 
-    .step h3 { margin:0 0 8px; }
-    .step p { margin:0; color:var(--muted); }
+    .step p { color: #bdc0c6; }
 
-    .split {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:32px;
-      align-items:start;
+    .cta-section {
+      background: var(--paper);
+      color: var(--paper-text);
+      padding: 68px 0;
     }
 
-    .checklist {
-      list-style:none;
-      padding:0;
-      margin:18px 0 0;
-      display:grid;
-      gap:11px;
+    .cta-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      padding: 34px;
+      background: #fff;
+      border: 1px solid var(--line-light);
+      border-radius: 18px;
     }
 
-    .checklist li {
-      position:relative;
-      padding-left:29px;
-      color:#d4d4d4;
+    .cta-card p:not(.eyebrow) {
+      max-width: 700px;
+      margin: 0;
+      color: var(--paper-muted);
     }
 
-    .checklist li::before {
-      content:"✓";
-      position:absolute;
-      left:0;
-      color:#ff6573;
-      font-weight:900;
+    .cta-actions .btn-outline {
+      color: var(--paper-text);
+      border-color: #92969e;
     }
-
-    .cta {
-      background:linear-gradient(135deg,#1a1a1a,#0c0c0c);
-      border:1px solid #383838;
-      border-radius:18px;
-      padding:36px;
-    }
-
-    .cta h2 { max-width:700px; }
-    .cta p { color:#c7c7c7; max-width:720px; }
 
     footer {
-      border-top:1px solid var(--line);
-      background:#050505;
+      background: #090b0e;
+      border-top: 1px solid #292c32;
+      color: #aeb1b7;
     }
 
     .footer-inner {
-      padding:32px 0 92px;
-      color:#aaa;
-      display:flex;
-      justify-content:space-between;
-      gap:24px;
-      flex-wrap:wrap;
-      font-size:.9rem;
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: .88rem;
     }
 
-    .mobile-bar {
-      display:none;
+    @media (max-width: 880px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      .cta-card { grid-template-columns: 1fr; }
+      .brand img { height: 68px; }
     }
 
-    @media (max-width:860px) {
-      .hero-grid,
-      .split {
-        grid-template-columns:1fr;
+    @media (max-width: 620px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
       }
-      .hero-grid { padding:44px 0; gap:30px; }
-      .cards,.steps { grid-template-columns:1fr; }
-      .nav-actions .btn-secondary { display:none; }
-    }
 
-    @media (max-width:600px) {
-      .topbar-inner { justify-content:center; text-align:center; }
-      .nav { min-height:68px; }
-      .brand { font-size:1.1rem; }
-      .nav-actions .btn-primary { padding:0 14px; min-height:44px; }
-      .hero-actions .btn { width:100%; }
-      .section { padding:52px 0; }
-      .cta { padding:26px 22px; }
-      .footer-inner { padding-bottom:100px; }
-      .mobile-bar {
-        position:fixed;
-        left:0; right:0; bottom:0;
-        z-index:20;
-        display:grid;
-        grid-template-columns:1fr 1.25fr;
-        gap:8px;
-        padding:9px 12px calc(9px + env(safe-area-inset-bottom));
-        background:rgba(6,6,6,.96);
-        border-top:1px solid #333;
-        backdrop-filter:blur(10px);
+      .topbar-inner span:last-child { display: none; }
+
+      .nav {
+        min-height: 82px;
+        gap: 12px;
       }
-      .mobile-bar .btn { min-height:47px; padding:0 10px; font-size:.92rem; }
+
+      .brand img { height: 60px; }
+
+      .nav-actions .btn-outline { display: none; }
+
+      .nav-actions .btn-primary {
+        min-height: 44px;
+        padding: 0 16px;
+        font-size: .85rem;
+      }
+
+      .hero-grid {
+        padding: 42px 0;
+        gap: 30px;
+      }
+
+      h1 { font-size: clamp(2.55rem, 12vw, 3.35rem); }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .trust-row { gap: 12px 16px; }
+
+      .section, .cta-section { padding: 52px 0; }
+
+      .cta-card { padding: 25px 22px; }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .footer-inner {
+        padding: 25px 0;
+        min-height: 0;
+      }
     }
   </style>
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"AutoRepair",
-    "name":"Habibi Auto Service",
-    "url":"https://habibiauto.ca/brakes/",
-    "telephone":"+1-289-214-1944",
-    "areaServed":"London, Ontario",
-    "description":"Mobile brake repair service in London, Ontario, including eligible brake pad and rotor replacement at the customer's home or workplace.",
-    "image":"https://habibiauto.ca/brakes/mobile-brake-repair-london-ontario.jpg"
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Habibi Auto Service",
+    "url": "https://habibiauto.ca/brakes/",
+    "telephone": "+1-289-214-1944",
+    "areaServed": "London, Ontario",
+    "description": "Mobile brake repair service in London, Ontario, including eligible brake pad and rotor replacement at the customer's home or workplace.",
+    "image": "https://habibiauto.ca/brakes/mobile-brake-repair-london-ontario.jpg"
   }
   </script>
 </head>
 
 <body>
   <div class="topbar">
-    <div class="topbar-inner">
+    <div class="container topbar-inner">
       <span>Mobile mechanic serving London, Ontario and surrounding areas</span>
-      <span>289-214-1944</span>
+      <span><a href="tel:+12892141944">289-214-1944</a></span>
     </div>
   </div>
 
-  <header>
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="/">HABIBI AUTO SERVICE <span>WE COME TO YOU</span></a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Habibi Auto Service home">
+        <img src="../habibi-logo-tight.png" alt="Habibi Auto Service — We Come to You">
+      </a>
+
       <div class="nav-actions">
-        <a class="btn btn-secondary" href="/">Back to home</a>
-        <a class="btn btn-primary" href="/#contact">Request service</a>
+        <a class="btn btn-outline" href="tel:+12892141944">Call Now</a>
+        <a class="btn btn-primary" href="/#contact">Request Service</a>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-grid">
+      <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Mobile Brake Repair · London, Ontario</div>
-          <h1>Brake repair without the trip to the shop.</h1>
+          <p class="eyebrow">Mobile Brake Repair · London, Ontario</p>
+          <h1>Brake Repair Without the Trip to the Shop.</h1>
           <p class="hero-copy">
             Brake pads, rotors and eligible brake repairs completed at your home or workplace in London, Ontario.
             Keep your day moving while Habibi Auto comes to you.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/#contact">Request brake service</a>
-            <a class="btn btn-secondary" href="tel:+12892141944">Call 289-214-1944</a>
+            <a class="btn btn-primary" href="/#contact">Request Brake Service</a>
+            <a class="btn btn-outline" href="tel:+12892141944">Call 289-214-1944</a>
           </div>
 
           <div class="trust-row" aria-label="Service benefits">
-            <span>Mobile service</span>
-            <span>Clear starting prices</span>
-            <span>Home or workplace</span>
+            <span>Mobile Service</span>
+            <span>Clear Starting Prices</span>
+            <span>Home or Workplace</span>
           </div>
         </div>
 
-        <figure class="hero-image-wrap">
+        <figure class="photo-card">
           <img
             src="mobile-brake-repair-london-ontario.jpg"
             alt="Mobile brake rotor replacement performed by Habibi Auto Service in London, Ontario"
@@ -434,92 +494,87 @@
             height="1350"
             loading="eager"
           >
-          <figcaption class="image-caption">Real Habibi Auto mobile brake service in London, Ontario.</figcaption>
+          <figcaption>Real Habibi Auto mobile brake service in London, Ontario.</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-heading">
-        <div class="eyebrow">Brake Services</div>
-        <h2>Common brake repairs we can complete at your location.</h2>
-        <p class="lead">Final pricing depends on the vehicle, condition, access and work required.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="price">Labour from $160</div>
-          <h3>Brake Pads + Rotors · One Axle</h3>
-          <p>Labour to replace the brake pads and rotors on either the front or rear axle.</p>
-        </article>
-
-        <article class="card">
-          <div class="price">Labour from $120</div>
-          <h3>Brake Pads Only · One Axle</h3>
-          <p>Labour to replace brake pads on either the front or rear axle when the existing rotors and related components are suitable.</p>
-        </article>
-
-        <article class="card">
-          <div class="price">Labour from $300</div>
-          <h3>Full Brake Job</h3>
-          <p>Labour for pads and rotors on both axles, including cleaning and anti-seize where appropriate.</p>
-        </article>
-      </div>
-
-      <div class="note">
-        Prices shown are starting labour prices in Canadian dollars. Parts and any additional required work are separate.
-        We confirm the service details and price before the approved repair.
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <div class="eyebrow">How It Works</div>
-        <h2>A simpler way to get your brakes serviced.</h2>
-      </div>
-
-      <div class="steps">
-        <article class="step">
-          <h3>Send your request</h3>
-          <p>Tell us your vehicle year, make and model, what the brakes are doing, and where the vehicle is located.</p>
-        </article>
-        <article class="step">
-          <h3>We confirm the repair</h3>
-          <p>We review the service, availability, starting price and whether the work can be safely completed at your location.</p>
-        </article>
-        <article class="step">
-          <h3>We come to you</h3>
-          <p>Our mobile mechanic arrives at your home or workplace and completes the approved brake repair.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="split">
-        <div>
-          <div class="eyebrow">Why Mobile Brake Service?</div>
-          <h2>Your vehicle gets serviced without taking over your day.</h2>
-          <p class="lead">
-            Instead of dropping off your vehicle, arranging a ride and waiting for a shop appointment, Habibi Auto brings eligible brake service to you.
-          </p>
-          <ul class="checklist">
-            <li>Service at your home or workplace</li>
-            <li>No waiting room</li>
-            <li>No arranging a ride back from a repair shop</li>
-            <li>Clear service details before work begins</li>
-            <li>Mobile service for many common brake repairs</li>
-          </ul>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Brake Services</p>
+          <h2>Common Brake Repairs We Can Complete at Your Location.</h2>
+          <p class="lead">Final pricing depends on the vehicle, condition, access and work required.</p>
         </div>
 
-        <div class="cta">
-          <div class="eyebrow">Need Brake Service?</div>
-          <h2>Tell us about your vehicle.</h2>
-          <p>
-            Send your vehicle information and the brake service you need. Habibi Auto will contact you to confirm availability and pricing.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/#contact">Request service</a>
-            <a class="btn btn-secondary" href="https://wa.me/12892141944">WhatsApp us</a>
+        <div class="cards">
+          <article class="card">
+            <div class="price">Labour From $160</div>
+            <h3>Brake Pads + Rotors · One Axle</h3>
+            <p>Labour to replace the brake pads and rotors on either the front or rear axle.</p>
+          </article>
+
+          <article class="card">
+            <div class="price">Labour From $120</div>
+            <h3>Brake Pads Only · One Axle</h3>
+            <p>Labour to replace brake pads on either the front or rear axle when the existing rotors and related components are suitable.</p>
+          </article>
+
+          <article class="card">
+            <div class="price">Labour From $300</div>
+            <h3>Full Brake Job</h3>
+            <p>Labour for pads and rotors on both axles, including cleaning and anti-seize where appropriate.</p>
+          </article>
+        </div>
+
+        <div class="price-note">
+          Prices shown are starting labour prices in Canadian dollars. Parts and any additional required work are separate.
+          We confirm the service details and price before the approved repair.
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How It Works</p>
+          <h2>A Simpler Way to Get Your Brakes Serviced.</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Send Your Request</h3>
+            <p>Tell us your vehicle year, make and model, what the brakes are doing, and where the vehicle is located.</p>
+          </article>
+
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>We Confirm the Repair</h3>
+            <p>We review the service, availability, starting price and whether the work can be safely completed at your location.</p>
+          </article>
+
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>We Come to You</h3>
+            <p>Our mobile mechanic arrives at your home or workplace and completes the approved brake repair.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <p class="eyebrow">Need Brake Service?</p>
+            <h2>Tell Us About Your Vehicle.</h2>
+            <p>Send your vehicle information and the brake service you need. Habibi Auto will contact you to confirm availability and pricing.</p>
+          </div>
+
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="/#contact">Request Service</a>
+            <a class="btn btn-outline" href="https://wa.me/12892141944">WhatsApp Us</a>
           </div>
         </div>
       </div>
@@ -527,15 +582,10 @@
   </main>
 
   <footer>
-    <div class="footer-inner">
-      <div>© 2026 Habibi Auto Service. All rights reserved.</div>
-      <div>Mobile mechanic service · London, Ontario · 289-214-1944</div>
+    <div class="container footer-inner">
+      <span>© 2026 Habibi Auto Service. All Rights Reserved.</span>
+      <span>Mobile Mechanic Service · London, Ontario · 289-214-1944</span>
     </div>
   </footer>
-
-  <div class="mobile-bar" aria-label="Quick contact">
-    <a class="btn btn-secondary" href="tel:+12892141944">Call now</a>
-    <a class="btn btn-primary" href="/#contact">Request service</a>
-  </div>
 </body>
 </html>
